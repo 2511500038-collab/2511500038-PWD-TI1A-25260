@@ -1,168 +1,207 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judul Halaman</title>
+    <title>Tugas PWD Pertemuan 3</title>
     <style>
-    #about {
-        background-color: rgb(100, 149, 165);
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 700px;
-        margin: 20px auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    } 
-    #about h2 {
-        color: rgb(255, 250, 235);
-        border-bottom: 2px solid rgb(255, 250, 235);
-        padding-bottom: 6px;
-        margin-top: 0;
-        margin-bottom: 16px;
-    }
-    #about p {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        margin: 8px 0;
-        padding: 6px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    }
-    
-    #about strong {
-        min-width: 180px;
-        color:aqua;
-        font-weight: 600;
-        text-align: right;
-        padding-right: 16px;
-        flex-shrik: 0;
-    } 
-    
-    @media (max-width: 600px) {
-        #about p {
-            flex-direction: column;
-            align-items: flex-start;
+        #about {
+            background-color: rgba(144, 177, 244, 0.75);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #about strong {
-            text-align: left;
-            padding-right: 0;
-            margin-bottom: 2px;
-        }
-        
-    }
-    #contact {
-        background-color: rgb(100, 149, 165);
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 700px;
-        margin: 20px auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    } 
-    #contact h2 {
-        color: rgb(255, 250, 235);
-        border-bottom: 2px solid rgb(255, 250, 235);
-        padding-bottom: 6px;
-        margin-top: 0;
-        margin-bottom: 16px;
-    }
-    #about p,
-    #contact label {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        margin: 0;
-        padding: 6px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    }
-
-    #contact p:last-child {
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    #contact strong {
-        min-width: 180px;
-        color:aqua;
-        font-weight: 600;
-        text-align: right;
-        padding-right: 16px;
-        flex-shrik: 0;
-    } 
-    
-    @media (max-width: 600px) {
-        #contact p {
-            flex-direction: column;
-            align-items: flex-start;
+        #contact {
+            background-color: hsla(217, 65%, 61%, 0.75);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #contact strong {
-            text-align: left;
-            padding-right: 0;
-            margin-bottom: 2px;
+        #about h2,
+        #contact h2 {
+            color: rgb(84, 130, 194);
+            border-bottom: 2px solid rgb(21, 20, 20);
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
-    
-         #contact p:last-child {
-        justify-content: center;
-        gap: 10px;
-    }
-    }
+
+        #about p,
+        #contact label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin: 0;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(74, 99, 152, 0.5);
+        }
+
+        #about p:last-child {
+            border-bottom: none;
+        }
+
+        #about strong,
+        #contact label>span {
+            min-width: 180px;
+            color: rgb(50, 80, 137);
+            font-weight: 600;
+            text-align: right;
+            padding-right: 16px;
+            flex-shrink: 0;
+        }
+
+        #contact input,
+        #contact textarea {
+            flex: 1;
+            border: 1px solid rgb(37, 53, 79);
+            border-radius: 6px;
+            padding: 8px;
+            color: #000;
+            font-weight: normal;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+        #contact button {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            margin-right: 8px;
+        }
+
+        #contact button[type="reset"] {
+            background-color: rgb(194, 193, 193);
+            color: hsl(0, 0%, 0%);
+            font-weight: 500;
+        }
+
+        #contact button[type="submit"] {
+            background-color: rgb(68, 50, 119);
+            color: hsl(0, 0%, 100%);
+            font-weight: 600;
+        }
+
+        #contact button[type="reset"]:hover {
+            background-color: rgb(224, 224, 224);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(-1px);
+        }
+
+        #contact button[type="submit"]:hover {
+            background-color: rgb(223, 223, 223);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 600px) {
+
+            #about p,
+            #contact label {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #about strong,
+            #contact label>span {
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 2px;
+            }
+
+            #contact input,
+            #contact textarea,
+            #contact button {
+                width: 100%;
+            }
+
+            .button {
+                flex-direction: column-reverse;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <header><main></main>
-    <footeer></footeer>
-        <h1>ini header</h1>
+    <header>
+        <h1>Ini Header</h1>
         <nav>
             <ul>
-                <li><a href="home">beranda</a></li>
-                <li><a href="about">tentang</a></li>
-                <li><a href="contact">kontak</a></li>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <section id="home">
-        <h2>Selamat Datang</h2>
-        <p>Ini contoh paragraf HTML.</p>
-    </section>
+    <main>
+        <section id="home">
+            <h2>Selamat Datang! &#128512;</h2>
+            <p>Ini contoh paragraf HTML.</p>
+        </section>
 
-    <section id="about">
-        <h2>Tentang kami</h2>
-        <p><strong>NIM:</strong> 2511500038</p>
-        <p><strong>Nama:</strong> Randy orlando</p>
-        <p><strong>Alamat:</strong> Pangkal Pinang, Jl. manunggal</p>
-        <p><strong>Motto hidup:</strong> we live once so make it work</p>
-        <p><strong>hobi:</strong> digital painting</p>
-        <p><strong>Pekerjaan:</strong> Mahasiswa di ISB Atma luhur prodi Teknik Informatika</p>
-        <p><strong>Nama Orang tua:</strong>Bapak Hendry dan Ibu Erly</p>
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p><strong>NIM:</strong> 2511500020</p>
+            <p><strong>Nama Lengkap:</strong> Widya Serena Mulyaputeri</p>
+            <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+            <p><strong>Tanggal Lahir:</strong> 10 September 2007</p>
+            <p><strong>Hobi:</strong> Menggambar</p>
+            <p><strong>Pasangan:</strong> Tidak ada</p>
+            <p><strong>Pekerjaan:</strong> Mahasiswa di ISB Atma Luhur prodi Teknik Informatika</p>
+            <p><strong>Nama Orang Tua:</strong> Bapak Mulyadi dan Ibu Fong Siauw Yin</p>
+            <p><strong>Nama Kakak:</strong> -</p>
+            <p><strong>Nama Adik:</strong> Nelsia Fadia Mulyaputeri</p>
+        </section>
 
-    </section>
+        <section id="contact">
+            <h2>Kontak Kami</h2>
+            <form action="" method="GET">
+                <label for="txtNama">
+                    <span>Nama:</span>
+                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required
+                        autocomplete="name">
+                </label>
 
-    <section id="contact">
-    <h2>kontak kami</h2>
-    <p>contoh format</p>
-        <form action="" method="GET">
-            <label for="txtNama"><span>Nama:</span>
-            <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
-            </label>
-            <label for="txtEmail"><span>Email:</span>
-            <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
-            </label>
-            <label for="txtPesan"><span>Pesan Anda:</span>
-            <textarea name="txtPesan" id="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-            </label>
-            <button type="submit">kirim</button>
-            <button type="reset">batal</button> 
-        </form>
-    </section>
-</main>
+                <label for="txtEmail">
+                    <span>Email:</span>
+                    <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
+                        autocomplete="email">
+                </label>
 
-<footer>
-    <p>&copy; 2025 Randy orlando dan NIM:2511500038</p>
-</footer>
+                <label for="txtPesan">
+                    <span>Pesan:</span>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+                        required></textarea>
+                </label>
 
+                <div class="button">
+                    <button type="reset">Batal</button>
+                    <button type="submit">Kirim</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Widya Serena Mulyaputeri [2511500020]</p>
+    </footer>
 </body>
-</html>
 
+</html>
