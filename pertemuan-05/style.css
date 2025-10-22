@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: arial, sans-serif;
+    background: #f5f5f5;
+    color: #000000;
+    line-height: 1.5;
+}
+
+header {
+    background: rgb(75, 87, 227);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+header li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+}
+
+header li a:hover {
+    background-color: rgb(68, 68, 212);
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+header li a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 6px;
+    background-color: hsl(249, 74%, 49%);
+}
+
+header li a:active {
+    background-color: rgb(70, 20, 207);
+    transform: translateY(1px);
+}
+
+#home {
+    background-color: rgba(162, 183, 218, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#about {
+    background-color: rgba(122, 104, 240, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#contact {
+    background-color: hsla(232, 63%, 54%, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#home h2,
+#about h2,
+#contact h2 {
+    color: rgb(31, 47, 54);
+    border-bottom: 2px solid rgb(66, 56, 92);
+    padding-bottom: 6px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+#home p {
+    text-align: justify;
+}
+
+#about p,
+#contact label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(67, 42, 88, 0.5);
+}
+
+#about p:last-child {
+    border-bottom: none;
+}
+
+#about strong,
+#contact label>span {
+    min-width: 180px;
+    color: rgb(31, 48, 54);
+    font-weight: 600;
+    text-align: right;
+    padding-right: 16px;
+    flex-shrink: 0;
+}
+
+#contact input,
+#contact textarea {
+    flex: 1;
+    border: 1px solid rgb(45, 42, 88);
+    border-radius: 6px;
+    padding: 8px;
+    color: #000;
+    font-weight: normal;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+#contact button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+}
+
+#contact button[type="reset"] {
+    background-color: rgb(194, 193, 193);
+    color: hsl(0, 0%, 0%);
+    font-weight: 500;
+}
+
+#contact button[type="submit"] {
+    background-color: rgb(60, 42, 88);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+#contact button[type="reset"]:hover {
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+#contact button[type="submit"]:hover {
+    background-color: rgb(76, 26, 150);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        margin: 0 0 8 px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin: 8px 0 0;
+    }
+
+    header li a {
+        display: block;
+        padding: 12px 14px;
+        border: 1px solid rgba white;
+        border-radius: 6px;
+        background: rgba(73, 53, 102, 0.5);
+        backdrop-filter: saturate(120%);
+    }
+
+    #home,
+    #about,
+    #contact {
+        scroll-margin-top: 242px;
+    }
+
+    #about p,
+    #contact label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #about strong,
+    #contact label>span {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 2px;
+    }
+
+    #contact input,
+    #contact textarea,
+    #contact button {
+        width: 100%;
+    }
+
+    .button {
+        flex-direction: column-reverse;
+    }
+}
