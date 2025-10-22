@@ -173,6 +173,7 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
 .menu-toggle {
     display: none;
     position: absolute;
@@ -186,12 +187,18 @@ footer {
 }
 
 @media (max-width: 600px) {
-.menu-toggle {
-    header {
+    .menu-toggle {
         display: block;
         position: absolute;
         left: 16px;
         top: 8px;
+    }
+
+    header {
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     header h1 {
