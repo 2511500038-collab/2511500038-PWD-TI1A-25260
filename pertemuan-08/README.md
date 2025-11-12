@@ -11,5 +11,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>mengekstrak file uts ke repository pertemuan-08</li>
   <li>menambahkan section baru dengan judul Pendaftaran Profil </li>
   <li>mengganti section tentang saya </li>
-  
+  <li>menyesuaikan style.css</li>
 </ol>
