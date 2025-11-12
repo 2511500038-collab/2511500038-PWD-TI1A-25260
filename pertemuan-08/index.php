@@ -121,6 +121,13 @@ if (isset($_SESSION["sesadik"])): $sesadik = $_SESSION["sesadik"]; endif;
         <label for="adik">Nama Adik:</label>
         <input type="text" id="adik" name="adik">
         <br>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+
+        <section id="contact">
+        <h2>Kontak kami</h2>
+        <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
