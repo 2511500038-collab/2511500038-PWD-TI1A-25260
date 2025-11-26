@@ -11,4 +11,5 @@
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>mengextract file pertemuan 10 ke pertemuan 09</li>
 </ol>
