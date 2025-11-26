@@ -15,4 +15,5 @@
   <li>Modif barisan 10-19 menjadi bentuk array associative</li>
   <li>Memperpendek barisan session biodata</li>
   <li>menghapus barisan code 19-67 di section about</li>
+  <li>menghapus code lama pada section about dan mempersingkatnya</li>
 </ol>
