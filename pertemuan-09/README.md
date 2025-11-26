@@ -16,4 +16,5 @@
   <li>Memperpendek barisan session biodata</li>
   <li>menghapus barisan code 19-67 di section about</li>
   <li>menghapus code lama pada section about dan mempersingkatnya</li>
+  <li>membuat fungsi.php dan menambhkan code</li>
 </ol>
