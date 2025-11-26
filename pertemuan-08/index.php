@@ -69,11 +69,16 @@ if (isset($_SESSION["sesadik"])): $sesadik = $_SESSION["sesadik"]; endif;
 
     <section id="about">
       <?php
-      $nim = 2511500038;
-      $NIM = '2511500038';
-      $nama = "randy";
-      $Nama = 'randy orlando';
-      $tempat = "Jl.manunggal";
+        $nim = 2511500038;
+        $nama = "Randy orlando";
+        $tempatLahir = "Pangkalpinang";
+        $tanggalLahir = "14 agustus 2007";
+        $hobi = "digital painting";
+        $pasangan = "belum ada";
+        $pekerjaan = "siswa di ISB Atma Luhur";
+        $ortu = "Bapak Mulyadi dan Ibu Fong Siauw Yin";
+        $namaKakak = "-";
+        $namaAdik = "Nelsia Fadia Mulyaputeri";
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
@@ -88,8 +93,8 @@ if (isset($_SESSION["sesadik"])): $sesadik = $_SESSION["sesadik"]; endif;
       </p>
       <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
       <p><strong>Tanggal Lahir:</strong> 14 agustus 2007</p>
-      <p><strong>Hobi:</strong> digital painting &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+      <p><strong>Hobi:</strong> digital painting &#11088;</p>
+      <p><strong>Pasangan:</strong> Belum ada &#128578;</p>
       <p><strong>Pekerjaan:</strong> siswa di ISB Atma Luhur &copy; 2025</p>
       <p><strong>Nama Orang Tua:</strong> Bapak hendry dan Ibu erly</p>
       <p><strong>Nama Kakak:</strong> - </p>

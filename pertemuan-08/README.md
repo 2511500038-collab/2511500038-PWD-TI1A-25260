@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>menambahkan section baru dengan judul Pendaftaran Profil </li>
   <li>mengganti section tentang saya </li>
   <li>menyesuaikan style.css</li>
+  <li>menambahkan section id about baru untuk seksi pengunjung</li>
 </ol>
