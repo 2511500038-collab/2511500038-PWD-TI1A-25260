@@ -17,4 +17,7 @@
   <li>menghapus barisan code 19-67 di section about</li>
   <li>menghapus code lama pada section about dan mempersingkatnya</li>
   <li>membuat fungsi.php dan menambhkan code</li>
+  <li>menambahkan fungsi formaTanggal</li>
+  <li>menambahkan function tampilanbiodata</li>
+  <li>menghapus section id about dan mengubah menjadi satu baris</li>
 </ol>
