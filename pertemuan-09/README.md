@@ -13,4 +13,6 @@
   <li>echo session ke nilai label section contact selesai</li>
   <li>mengextract file pertemuan 10 ke pertemuan 09</li>
   <li>Modif barisan 10-19 menjadi bentuk array associative</li>
+  <li>Memperpendek barisan session biodata</li>
+  <li>menghapus barisan code 19-67 di section about</li>
 </ol>
