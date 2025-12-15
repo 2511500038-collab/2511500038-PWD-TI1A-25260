@@ -1,4 +1,10 @@
 <?php
+function redirect($url)
+{
+  header("Location: " . $url);
+  exit();
+}
+
 function bersihkan($str)
 {
   return htmlspecialchars(trim($str));
@@ -26,3 +32,4 @@ function tampilkanBiodata($conf, $arr)
   }
   return $html;
 }
+
