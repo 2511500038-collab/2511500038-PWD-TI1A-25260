@@ -6,4 +6,5 @@
   <li>mengisi tab insert </li>
   <li>update fungsi.php </li>
   <li>mngubah index.php </li>
+  <li>mengedit proses.php </li>
 </ol>
