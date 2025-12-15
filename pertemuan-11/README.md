@@ -5,4 +5,5 @@
   <li>membuat tbl_tamu dan mengetik kode </li>
   <li>mengisi tab insert </li>
   <li>update fungsi.php </li>
+  <li>mngubah index.php </li>
 </ol>
