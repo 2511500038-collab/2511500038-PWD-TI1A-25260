@@ -9,4 +9,5 @@
   <li>mengedit proses.php </li>
   <li>menambah kode edit di read.php</li>
   <li>menambahkan flash sukses dan eror di read.php</li>
+  <li>membuat edit.php dan menambahkan code</li>
 </ol>
