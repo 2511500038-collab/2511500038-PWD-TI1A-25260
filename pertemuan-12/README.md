@@ -8,4 +8,5 @@
   <li>mngubah index.php </li>
   <li>mengedit proses.php </li>
   <li>menambah kode edit di read.php</li>
+  <li>menambahkan flash sukses dan eror di read.php</li>
 </ol>
