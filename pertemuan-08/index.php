@@ -76,9 +76,9 @@ if (isset($_SESSION["sesadik"])): $sesadik = $_SESSION["sesadik"]; endif;
         $hobi = "digital painting";
         $pasangan = "belum ada";
         $pekerjaan = "siswa di ISB Atma Luhur";
-        $ortu = "Bapak Mulyadi dan Ibu Fong Siauw Yin";
+        $ortu = "siswa di ISB Atma Luhur";
         $namaKakak = "-";
-        $namaAdik = "Nelsia Fadia Mulyaputeri";
+        $namaAdik = "joselyn";
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
