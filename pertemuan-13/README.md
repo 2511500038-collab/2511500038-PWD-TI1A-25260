@@ -6,4 +6,5 @@ nama:Randy orlando<br>
 <ol>
 <li>import sql ke pertemuan 13</li>
 <li>menambahkan link delete ntuk ke file proses_delete.php</li>
+<li>salin code proses update ke proses delete</li>
 </ol>
