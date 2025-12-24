@@ -10,4 +10,5 @@ nama:Randy orlando<br>
 <li>menyesuaikan kode di delete.php agar code nya delete</li>
 <li>menambahkan para mater cid</li>
 <li>memperbaiki file proses_delete.php</li>
+<li>confirmasi sebelum hapus</li>
 </ol>
