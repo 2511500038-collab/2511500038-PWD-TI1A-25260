@@ -8,4 +8,4 @@
   <li>menambahkan kode di file edit_form.php</li>
   <li>menambahkan kode di proses_update.php</li>
   <li>mngecek gagal/sukses nya code</li>
-  
+  <li>mengubah code di proses_update.php</li>
