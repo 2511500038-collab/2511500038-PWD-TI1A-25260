@@ -9,12 +9,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   redirect_ke('index.php#contact');
 }
 
+$isBiodataForm = isset($_POST['submit_biodata']);
+
+if (!$isBiodataForm) {
 #ambil dan bersihkan nilai dari form
 $nama  = bersihkan($_POST['txtNama']  ?? '');
 $email = bersihkan($_POST['txtEmail'] ?? '');
 $pesan = bersihkan($_POST['txtPesan'] ?? '');
 $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
-
+}
 #Validasi sederhana
 $errors = []; #ini array untuk menampung semua error yang ada
 
@@ -107,4 +110,83 @@ $arrBiodata = [
 ];
 $_SESSION["biodata"] = $arrBiodata;
 
+
 header("location: index.php#about");
+
+} else {
+
+  $dataBiodata = bersihkanDataBiodata($_POST);
+  
+  $errors = validasiDataBiodata($dataBiodata, $conn);
+
+   if (!empty($errors)) {
+    $_SESSION['old_biodata'] = $dataBiodata;
+    $_SESSION['flash_error'] = implode('<br>', $errors);
+    redirect_ke('index.php#biodata');
+  }
+
+
+  $sql = "INSERT INTO mahasiswa (nim, nama, tempat_lahir, tanggal_lahir, alamat, email, telepon, 
+                                jenis_kelamin, program_studi, hobi, pasangan, pekerjaan, 
+                                nama_ortu, nama_kakak, nama_adik) 
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  $stmt = mysqli_prepare($conn, $sql);
+
+  if (!$stmt) {
+    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    redirect_ke('index.php#biodata');
+  }
+
+
+  $tanggal = $dataBiodata['tanggal_lahir'] === '' ? null : $dataBiodata['tanggal_lahir'];
+  mysqli_stmt_bind_param($stmt, "sssssssssssssss", 
+      $dataBiodata['nim'], 
+      $dataBiodata['nama'], 
+      $dataBiodata['tempat_lahir'], 
+      $tanggal, 
+      $dataBiodata['alamat'], 
+      $dataBiodata['email'], 
+      $dataBiodata['telepon'],
+      $dataBiodata['jenis_kelamin'], 
+      $dataBiodata['program_studi'], 
+      $dataBiodata['hobi'], 
+      $dataBiodata['pasangan'], 
+      $dataBiodata['pekerjaan'],
+      $dataBiodata['nama_ortu'], 
+      $dataBiodata['nama_kakak'], 
+      $dataBiodata['nama_adik']
+  );
+
+  if (mysqli_stmt_execute($stmt)) {
+    unset($_SESSION['old_biodata']);
+    $_SESSION['flash_sukses'] = 'Data biodata mahasiswa berhasil disimpan.';
+
+    $_SESSION["biodata"] = [
+      "nim" => $dataBiodata['nim'],
+      "nama" => $dataBiodata['nama'],
+      "tempat" => $dataBiodata['tempat_lahir'],
+      "tanggal" => $dataBiodata['tanggal_lahir'],
+      "hobi" => $dataBiodata['hobi'],
+      "pasangan" => $dataBiodata['pasangan'],
+      "pekerjaan" => $dataBiodata['pekerjaan'],
+      "ortu" => $dataBiodata['nama_ortu'],
+      "kakak" => $dataBiodata['nama_kakak'],
+      "adik" => $dataBiodata['nama_adik']
+    ];
+    
+    redirect_ke('read.php'); #pola PRG: redirect ke halaman baca data (soal nomor 3)
+  } else {
+    $_SESSION['old_biodata'] = $dataBiodata;
+    $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
+    redirect_ke('index.php#biodata');
+  }
+
+  #tutup statement
+  mysqli_stmt_close($stmt);
+}
+
+// Tutup koneksi database
+if (isset($conn)) {
+    $conn->close();
+}
+?>
