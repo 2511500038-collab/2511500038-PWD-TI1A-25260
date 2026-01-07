@@ -6,3 +6,4 @@
   <li>menambahkan kode di tampil_data.php</li>
   <li>membuat file edit_form.php</li>
   <li>menambahkan kode di file edit_form.php</li>
+  <li>menambahkan kode di proses_update.php</li>
