@@ -3,3 +3,4 @@
   <li>membuat tabel data mahasiswa</li>
   <li>membuat code metode post</li>
   <li>membuat file tampil data.php</li>
+  <li>menambahkan kode di tampil_data.php</li>
