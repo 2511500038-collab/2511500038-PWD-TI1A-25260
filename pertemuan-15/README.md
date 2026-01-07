@@ -9,3 +9,4 @@
   <li>menambahkan kode di proses_update.php</li>
   <li>mngecek gagal/sukses nya code</li>
   <li>mengubah code di proses_update.php</li>
+  <li>finishing dan mengecek kesesuaian kode</li>
