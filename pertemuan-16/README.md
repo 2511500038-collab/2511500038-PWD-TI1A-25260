@@ -5,3 +5,4 @@
   <li>membuat tabel baru di php.admin</li>
   <li>mengkoneksi index ke koneksi.php</li>
   <li>menambhkan kode tabel baru di index.php</li>
+  <li>mnegecheck hasil kode index.php pada web</li>
