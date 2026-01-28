@@ -1,6 +1,12 @@
 <?php
 session_start();
-require_once __DIR__ . '/fungsi.php';
+require_once 'koneksi.php';
+
+status = isset($_SESSION['status']) ? $_SESSION['status'] : '';
+$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+$old_input = isset($_SESSION['old_input']) ? $_SESSION['old_input'] : array();
+
+unset($_SESSION['status'], $_SESSION['message'], $_SESSION['old_input']);
 ?>
 
 <!DOCTYPE html>
