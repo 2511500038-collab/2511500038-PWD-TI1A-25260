@@ -7,3 +7,4 @@
   <li>menambhkan kode tabel baru di index.php</li>
   <li>mnegecheck hasil kode index.php pada web</li>
   <li>mengedit code pada proses_bio.php</li>
+  <li>mngedit code read.php</li>
