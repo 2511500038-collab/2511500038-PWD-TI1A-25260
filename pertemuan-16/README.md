@@ -4,3 +4,4 @@
   <li>membuat file baru bernama create_table.php</li>
   <li>membuat tabel baru di php.admin</li>
   <li>mengkoneksi index ke koneksi.php</li>
+  <li>menambhkan kode tabel baru di index.php</li>
